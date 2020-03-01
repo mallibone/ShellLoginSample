@@ -1,0 +1,38 @@
+﻿using ShellLogin.Services.Routing;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
+
+namespace ShellLogin.ViewModels
+{
+
+    class LoginViewModel : BaseViewModel
+    {
+        private IRoutingService _navigationService;
+
+        public LoginViewModel(IRoutingService navigationService)
+        {
+            _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+            ExecuteLogin = new Command(() => Login());
+            ExecuteRegistration = new Command(() => Register());
+        }
+
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public ICommand ExecuteLogin { get; set; }
+        public ICommand ExecuteRegistration { get; set; }
+
+        private void Login()
+        {
+            // This is where you would probably check the login and only if valid do the navigation...
+            _navigationService.NavigateTo("//items");
+        }
+
+        private void Register()
+        {
+            _navigationService.NavigateTo("//login/registration");
+        }
+    }
+}
