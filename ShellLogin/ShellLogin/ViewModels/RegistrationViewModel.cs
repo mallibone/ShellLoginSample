@@ -31,7 +31,7 @@ namespace ShellLogin.ViewModels
 
         private async void Register()
         {
-            await _navigationService.NavigateTo("//items");
+            await _navigationService.NavigateTo("//main");
         }
     }
 }

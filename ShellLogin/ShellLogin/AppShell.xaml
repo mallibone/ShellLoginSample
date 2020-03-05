@@ -30,7 +30,7 @@
     <!-- Loading/Start Page -->
     <ShellItem Route="loading">
         <ShellContent ContentTemplate="{DataTemplate local:LoadingPage}" />
-     </ShellItem>
+    </ShellItem>
 
     <!-- Login and Registration Page -->
     <ShellItem Route="login">
