@@ -1,4 +1,5 @@
 ﻿using ShellLogin.Services.Routing;
+using Splat;
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -9,9 +10,9 @@ namespace ShellLogin.ViewModels
     {
         private IRoutingService _navigationService;
 
-        public RegistrationViewModel(IRoutingService navigationService)
+        public RegistrationViewModel(IRoutingService navigationService = null)
         {
-            _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+            _navigationService = navigationService ?? Locator.Current.GetService<IRoutingService>();
             ExecuteBack = new Command(() => Back());
             ExecuteRegistration = new Command(() => Register());
         }

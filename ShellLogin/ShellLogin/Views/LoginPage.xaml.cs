@@ -1,4 +1,5 @@
 ﻿using ShellLogin.ViewModels;
+using Splat;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +14,6 @@ namespace ShellLogin.Views
             BindingContext = ViewModel;
 		}
 
-	    internal LoginViewModel ViewModel { get; set; } = new LoginViewModel(App.NavigationService);
+        internal LoginViewModel ViewModel { get; set; } = Locator.Current.GetService<LoginViewModel>();
     }
 }

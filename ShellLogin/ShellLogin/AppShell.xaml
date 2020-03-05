@@ -8,9 +8,7 @@
        Title="ShellLogin"
        x:Class="ShellLogin.AppShell">
 
-    <!-- 
-        Styles and Resources 
-    -->
+    <!-- Styles and Resources -->
     <Shell.Resources>
         <ResourceDictionary>
             <Color x:Key="NavigationPrimary">#2196F3</Color>
@@ -29,51 +27,22 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <ShellItem Route="login">
-        <ShellContent Route="authenticate" ContentTemplate="{DataTemplate local:LoginPage}" />
+    <!-- Loading/Start Page -->
+    <ShellItem Route="loading">
+        <ShellContent ContentTemplate="{DataTemplate local:LoadingPage}" />
+     </ShellItem>
 
+    <!-- Login and Registration Page -->
+    <ShellItem Route="login">
+        <ShellContent Route="authenticate"
+                      ContentTemplate="{DataTemplate local:LoginPage}" />
         <ShellContent Route="registration"
                       ContentTemplate="{DataTemplate local:RegistrationPage}" />
     </ShellItem>
 
-    <!-- Your Pages -->
-    <TabBar Route="items">
-        <Tab Title="Browse" Icon="tab_feed.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
-        </Tab>
-        <Tab Title="About" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
-        </Tab>
-    </TabBar>
-
-    <!-- Optional Templates 
-    // These may be provided inline as below or as separate classes.
-
-    // This header appears at the top of the Flyout.
-    <Shell.FlyoutHeaderTemplate>
-        <DataTemplate>
-            <Grid>ContentHere</Grid>
-        </DataTemplate>
-    </Shell.FlyoutHeaderTemplate>
-
-    // ItemTemplate is for ShellItems as displayed in a Flyout
-    <Shell.ItemTemplate>
-        <DataTemplate>
-            <ContentView>
-                Bindable Properties: Title, Icon
-            </ContentView>
-        </DataTemplate>
-    </Shell.ItemTemplate>
-
-    // MenuItemTemplate is for MenuItems as displayed in a Flyout
-    <Shell.MenuItemTemplate>
-        <DataTemplate>
-            <ContentView>
-                Bindable Properties: Text, Icon
-            </ContentView>
-        </DataTemplate>
-    </Shell.MenuItemTemplate>
-
-    -->
-
+    <!-- Main Page -->
+    <ShellItem Route="main">
+        <ShellContent Title="Welcome"
+                      ContentTemplate="{DataTemplate local:MainPage}" />
+    </ShellItem>
 </Shell>

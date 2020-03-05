@@ -1,4 +1,5 @@
 ﻿using ShellLogin.Services.Routing;
+using Splat;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,14 +8,13 @@ using Xamarin.Forms;
 
 namespace ShellLogin.ViewModels
 {
-
     class LoginViewModel : BaseViewModel
     {
         private IRoutingService _navigationService;
 
-        public LoginViewModel(IRoutingService navigationService)
+        public LoginViewModel(IRoutingService navigationService = null)
         {
-            _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+            _navigationService = navigationService ?? Locator.Current.GetService<IRoutingService>();
             ExecuteLogin = new Command(() => Login());
             ExecuteRegistration = new Command(() => Register());
         }
@@ -27,7 +27,7 @@ namespace ShellLogin.ViewModels
         private void Login()
         {
             // This is where you would probably check the login and only if valid do the navigation...
-            _navigationService.NavigateTo("//items");
+            _navigationService.NavigateTo("//main");
         }
 
         private void Register()
