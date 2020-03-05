@@ -42,7 +42,6 @@
 
     <!-- Main Page -->
     <ShellItem Route="main">
-        <ShellContent Title="Welcome"
-                      ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
     </ShellItem>
 </Shell>
