@@ -27,12 +27,13 @@ namespace ShellLogin.ViewModels
         private void Login()
         {
             // This is where you would probably check the login and only if valid do the navigation...
-            _navigationService.NavigateTo("//main");
+            _navigationService.NavigateTo("///main/home");
         }
 
         private void Register()
         {
-            _navigationService.NavigateTo("//login/registration");
+            Shell.Current.GoToAsync("//login/registration");
+            //_navigationService.NavigateTo("register");
         }
     }
 }

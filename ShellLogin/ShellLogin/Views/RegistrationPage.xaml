@@ -3,17 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:ShellLogin.ViewModels"
+             x:DataType="{x:Type vm:RegistrationViewModel}"
              mc:Ignorable="d"
              Visual="Material"
              Shell.FlyoutBehavior="Disabled"
-             Shell.PresentationMode="ModalAnimated"
+             Shell.PresentationMode="Animated"
              x:Class="ShellLogin.Views.RegistrationPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel"
-                     Priority="-1"
-                     Order="Primary"
-                     Command="{Binding ExecuteBack}" />
-    </ContentPage.ToolbarItems>
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding ExecuteBack}"
+                            TextOverride="Back" />
+    </Shell.BackButtonBehavior>
     <ContentPage.Content>
         <StackLayout Spacing="8"
                      Margin="16,3">

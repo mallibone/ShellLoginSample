@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              Visual="Material"
              Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
              Shell.PresentationMode="ModalAnimated"
              x:Class="ShellLogin.Views.LoginPage">
     <ContentPage.Content>

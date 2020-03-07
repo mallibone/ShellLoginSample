@@ -26,7 +26,7 @@ namespace ShellLogin.ViewModels
 
         private async void Back()
         {
-            await _navigationService.NavigateTo("//login/authenticate");
+            await _navigationService.GoBack();
         }
 
         private async void Register()
