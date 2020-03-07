@@ -12,7 +12,6 @@ namespace ShellLogin
         {
             InitializeComponent();
 
-            //Routing.RegisterRoute("login", typeof(LoginPage));
             Routing.RegisterRoute("registration", typeof(RegistrationPage));
         }
     }
