@@ -15,5 +15,10 @@ namespace ShellLogin.Views
 		}
 
         internal LoginViewModel ViewModel { get; set; } = Locator.Current.GetService<LoginViewModel>();
+
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

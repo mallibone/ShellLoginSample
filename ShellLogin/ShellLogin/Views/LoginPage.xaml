@@ -5,9 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Visual="Material"
-             Shell.NavBarIsVisible="False"
+             Shell.NavBarIsVisible="True"
+             Shell.FlyoutBehavior="Disabled"
              Shell.TabBarIsVisible="False"
              Shell.PresentationMode="ModalAnimated"
+             Title="Login"
              x:Class="ShellLogin.Views.LoginPage">
     <ContentPage.Content>
         <StackLayout Spacing="16" Margin="16,32">
