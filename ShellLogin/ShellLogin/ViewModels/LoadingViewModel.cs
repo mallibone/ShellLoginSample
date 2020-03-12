@@ -15,6 +15,7 @@ namespace ShellLogin.ViewModels
             this.identityService = identityService ?? Locator.Current.GetService<IIdentityService>();
         }
 
+        // Called by the views OnAppearing method
         public async void Init()
         {
             var isAuthenticated = await this.identityService.VerifyRegistration();
