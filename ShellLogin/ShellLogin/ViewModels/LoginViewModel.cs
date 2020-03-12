@@ -33,7 +33,6 @@ namespace ShellLogin.ViewModels
         private void Register()
         {
             Shell.Current.GoToAsync("//login/registration");
-            //_navigationService.NavigateTo("register");
         }
     }
 }
