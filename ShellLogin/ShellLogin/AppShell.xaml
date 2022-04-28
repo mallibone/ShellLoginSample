@@ -39,12 +39,12 @@
     </Shell.Resources>
 
     <!-- Loading/Start Page -->
-    <ShellItem Route="loading">
+    <ShellItem Route="loading" FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate local:LoadingPage}" />
     </ShellItem>
 
     <!-- Login and Registration Page -->
-    <ShellContent Route="login"
+    <ShellContent Route="login" FlyoutItemIsVisible="False"
                   ContentTemplate="{DataTemplate local:LoginPage}">
     </ShellContent>
 
